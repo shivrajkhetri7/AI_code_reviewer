@@ -1,5 +1,6 @@
 import '../styles/Compiler.css';
 import React, { useState } from 'react';
+import { Code, AtSign, Hash, BrainCircuit } from "lucide-react";
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import axios from 'axios';
 import DOMPurify from 'dompurify';
@@ -55,6 +56,20 @@ function Compiler() {
         <div className='container'>
             <div className="user_inputs">
                 <div className='past-details'>
+                    {/* Empty Screen */}
+                    {inputHistory.length === 0 && <div className='empty-component'>
+                        <h1 className="title">
+                            🖥️ Code
+                            <span className="review">
+                                Review
+                            </span>
+                            Time & Fix
+                            <span className="review">
+                                Bugs
+                            </span>
+                            in Half With 🧠 AI
+                        </h1>
+                    </div>}
                     {inputHistory.map((input, index) => (
                         <div key={index} className='input-text'>
                             <p>{input}</p>
@@ -76,7 +91,7 @@ function Compiler() {
                 </div>
             </div>
             <div className="system_output">
-                {responseHistory.length > 0 && responseHistory.map((response:any, index) => (
+                {responseHistory.length > 0 && responseHistory.map((response: any, index) => (
                     <div className='readContext' key={index}>
                         <MarkdownPreview
                             source={response}

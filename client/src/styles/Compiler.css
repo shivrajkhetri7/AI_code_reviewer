@@ -8,7 +8,7 @@
     .user_inputs {
         width: 100%;
         border-radius: 10px;
-        background-color: #404040;
+        background-color: #212121;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -28,6 +28,22 @@
             resize: none;
             overflow-y: auto;
             overflow-wrap: anywhere;
+
+            .empty-component {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                line-height: 3rem;
+                .review {
+                    font-weight: 900;
+                    font-size: 5rem;
+                    font-family: "Atkinson Hyperlegible Next", serif; 
+                    color: #FF570A;
+                }
+            }
 
             .input-text {
                 box-sizing: border-box;
@@ -55,7 +71,7 @@
             bottom: 0px;
             display: flex;
             width: 100%;
-            background-color: #404040;
+            background-color: #212121;
             padding: 10px;
             box-sizing: border-box;
 
@@ -65,8 +81,8 @@
                 height: 15vh;
                 overflow: auto;
                 border-radius: 16px;
-                background-color: #262626;
-                border: 1px solid #3B3F3F;
+                background-color: #303030;
+                border: 1px solid #212121;
                 color: #F9FFFF;
                 box-sizing: border-box;
                 padding: 10px;
@@ -140,7 +156,7 @@
         height: 100%;
         border-radius: 10px;
         color: #fff;
-        background-color: #404040;
+        background-color: #212121;
         overflow-y: auto;
 
         .readContext {
@@ -148,7 +164,8 @@
             margin: 0.5rem;
             border-radius: 16px;
             padding: 1rem;
-            background-color: #161B22;
+            /* background-color: #161B22; */
+            background-color: #303030;
         }
     }
 
