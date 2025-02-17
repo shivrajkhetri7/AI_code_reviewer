@@ -1,0 +1,165 @@
+.container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    gap: 1rem;
+
+    .user_inputs {
+        width: 100%;
+        border-radius: 10px;
+        background-color: #404040;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: space-between;
+
+        .past-details {
+            width: 100%;
+            font-size: 1.2rem;
+            height: 100%;
+            border-radius: 16px;
+            word-wrap: break-word;
+            color: #F9FFFF;
+            box-sizing: border-box;
+            white-space: pre-wrap;
+            padding: 10px;
+            resize: none;
+            overflow-y: auto;
+            overflow-wrap: anywhere;
+
+            .input-text {
+                box-sizing: border-box;
+                margin: 1rem 0;
+                background-color: #161B22;
+                border-radius: 16px;
+                padding: 1rem;
+            }
+        }
+
+        .past-details::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .past-details::-webkit-scrollbar-track {
+            border-radius: 16px;
+            background-color: #e7e7e7;
+            border: 1px solid #cacaca;
+        }
+
+        .input-grp {
+            height: 25%;
+            position: sticky;
+            border: none;
+            bottom: 0px;
+            display: flex;
+            width: 100%;
+            background-color: #404040;
+            padding: 10px;
+            box-sizing: border-box;
+
+            .input-code {
+                width: 90%;
+                font-size: 1.2rem;
+                height: 15vh;
+                overflow: auto;
+                border-radius: 16px;
+                background-color: #262626;
+                border: 1px solid #3B3F3F;
+                color: #F9FFFF;
+                box-sizing: border-box;
+                padding: 10px;
+                resize: none;
+            }
+
+            .input-code:focus {
+                border: 1px solid #1e1f1f;
+            }
+
+            .input-code::placeholder {
+                font-weight: 600;
+                font-size: 1.2rem;
+                text-transform: capitalize;
+                color: #737373;
+            }
+
+            .input-code::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            .input-code::-webkit-scrollbar-track {
+                border-radius: 16px;
+                background-color: #e7e7e7;
+                border: 1px solid #cacaca;
+            }
+
+            .btn-send {
+                width: 10%;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                box-sizing: border-box;
+                object-fit: cover;
+                background-color: #fff;
+                align-self: center;
+                margin-left: 10px;
+                /* background-color: #404040; */
+                border: 1px solid #3B3F3F;
+                color: #F9FFFF;
+                animation: focusing 1.5s infinite alternate;
+                transition: transform 0.3s ease;
+
+                img {
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+
+            .btn-send:hover {
+                transform: scale(1.1);
+            }
+
+            @keyframes focusing {
+                0% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.1);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    .system_output {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        color: #fff;
+        background-color: #404040;
+        overflow-y: auto;
+
+        .readContext {
+            box-sizing: border-box;
+            margin: 0.5rem;
+            border-radius: 16px;
+            padding: 1rem;
+            background-color: #161B22;
+        }
+    }
+
+    .system_output::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .system_output::-webkit-scrollbar-track {
+        border-radius: 16px;
+        background-color: #e7e7e7;
+        border: 1px solid #cacaca;
+    }
+
+}
