@@ -15,6 +15,7 @@
     "axios": "^1.7.9",
     "dompurify": "^3.2.4",
     "lucide-react": "^0.475.0",
+    "matter-js": "^0.20.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^9.0.3",
@@ -46,5 +47,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/matter-js": "^0.19.8",
+    "webpack": "^5.98.0"
   }
 }

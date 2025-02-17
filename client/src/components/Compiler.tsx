@@ -1,10 +1,10 @@
 import '../styles/Compiler.css';
 import React, { useState } from 'react';
-import { Code, AtSign, Hash, BrainCircuit } from "lucide-react";
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import axios from 'axios';
 import DOMPurify from 'dompurify';
 import Image from "../assets/send.png";
+import FallingText from './FallingText';
 
 function Compiler() {
     const [inputText, setInputText] = useState<string>('');
@@ -91,6 +91,32 @@ function Compiler() {
                 </div>
             </div>
             <div className="system_output">
+                {responseHistory.length === 0 && <FallingText
+                    text={`We have an AI code review agent that allows you to paste any programming language code snippet. The AI will review your code and provide results and suggestions for improvement. Additionally, React is built with JavaScript and TypeScript, often utilizing libraries like Node.js, Python, Java, Ruby, PHP, and Go to enhance backend functionality. This can help streamline UI development and simplify your workflow.`}
+                    highlightWords={[
+                        "AI",
+                        "code review",
+                        "JavaScript",
+                        "TypeScript",
+                        "Node.js",
+                        "Python",
+                        "Java",
+                        "Ruby",
+                        "PHP",
+                        "Go",
+                        "React",
+                        "backend",
+                        "functionality",
+                        "workflow"
+                    ]}
+                    highlightClass="highlighted"
+                    trigger="hover"
+                    backgroundColor="transparent"
+                    wireframes={false}
+                    gravity={0.56}
+                    fontSize="2rem"
+                    mouseConstraintStiffness={0.9}
+                />}
                 {responseHistory.length > 0 && responseHistory.map((response: any, index) => (
                     <div className='readContext' key={index}>
                         <MarkdownPreview
